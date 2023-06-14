@@ -20,7 +20,10 @@ defmodule BotbScraper.MixProject do
   defp deps do
     [
       {:crawly, "~> 0.15"},
-      {:floki, "~> 0.34"}
+      {:floki, "~> 0.34"},
+      {:briefly, "~> 0.3"},
+      {:finch, "~> 0.15"},
+      {:multipart, "~> 0.3"}
     ]
   end
 end
