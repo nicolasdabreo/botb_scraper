@@ -10,6 +10,8 @@ config :crawly,
   follow_redirects: true,
   # Set to `:disabled` to crawl ALL records
   closespider_itemcount: 1,
+  log_dir: "/tmp/spider_logs",
+  log_to_file: true,
 
   # Use CSV output
   output_format: "csv",
@@ -26,5 +28,14 @@ config :crawly,
   pipelines: [
     Crawly.Pipelines.DuplicatesFilter,
     {Crawly.Pipelines.CSVEncoder, fields: item_fields},
-    {Crawly.Pipelines.WriteToFile, folder: "/tmp", extension: "csv"}
+    {Crawly.Pipelines.WriteToFile, folder: "/tmp", extension: "csv", include_timestamp: true}
   ]
+
+config :ex_aws,
+  json_codec: Jason,
+  region: "eu-west-2",
+  access_key_id: {:system, "AWS_ACCESS_KEY_ID"},
+  secret_access_key: {:system, "AWS_SECRET_ACCESS_KEY"}
+
+config :botb_scraper,
+  image_bucket: "imagestoredabreoai"

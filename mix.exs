@@ -21,9 +21,13 @@ defmodule BotbScraper.MixProject do
     [
       {:crawly, "~> 0.15"},
       {:floki, "~> 0.34"},
-      {:briefly, "~> 0.3"},
-      {:finch, "~> 0.15"},
-      {:multipart, "~> 0.3"}
+      {:image, "~> 0.33"},
+      {:ex_aws, "~> 2.4"},
+      {:ex_aws_s3, "~> 2.4"},
+      {:hackney, "~> 1.18"},
+      {:sweet_xml, "~> 0.7"},
+      {:jason, "~> 1.5-alpha.1"},
+      {:briefly, "~> 0.4"}
     ]
   end
 end
