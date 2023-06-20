@@ -24,3 +24,6 @@ botb_scraper-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+.envrc
+dets_simple_storage
